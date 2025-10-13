@@ -1,40 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🏥 Medtech Frontend
 
-## Getting Started
+A modern **Hospital Management Frontend** built to power a smart appointment and queue management system for healthcare organizations.
 
-First, run the development server:
+> **Client:** Lifeline Specialist Hospital  
+> **Project Date:** September 2025  
+> **Prepared By:** Head of Operations, Lifeline Specialist Hospital
+
+---
+
+## 🚀 Overview
+
+**Medtech Frontend** is the web interface for a digital appointment and queue system designed to:
+
+- Streamline patient bookings and reduce waiting times.
+- Help doctors manage schedules efficiently.
+- Provide real-time analytics for hospital management decisions.
+
+It is part of the **Smart Hospital Appointment & Queue Management System**, supporting patients, doctors, admins, and management staff.
+
+---
+
+## 🧩 Core Stack
+
+- [Next.js](https://nextjs.org/) — React framework for optimized SSR and routing
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework for rapid UI design
+- [shadcn/ui](https://ui.shadcn.com/) — Accessible, elegant UI components built on Radix UI
+- [SWR](https://swr.vercel.app/) — React data fetching and caching library
+
+---
+
+## 🎯 Project Objectives
+
+- **Patients:** Seamless online booking, rescheduling, and real-time updates
+- **Doctors:** Organized schedule management and reduced overlaps
+- **Admins/Staff:** Queue and appointment management tools
+- **Management:** Analytical insights into traffic, demographics, and utilization
+
+---
+
+## 📦 Core Features
+
+### ✅ Must-Have
+
+- Patient Portal
+- Doctor Dashboard
+- Queue Management
+- Notification System
+- Admin Dashboard
+- Predictive Booking Suggestions
+
+### 💡 Nice-to-Have
+
+- Telemedicine Integration
+- Payment System
+- Patient History Tracking
+
+---
+
+## 📈 Success Metrics
+
+- 50% of bookings done online within 6 months
+- 30% reduction in waiting time
+- <5% schedule conflicts
+- Active management adoption of reporting dashboards
+
+---
+
+## 🧠 Suggested Resources
+
+- [Shadcn UI Docs](https://ui.shadcn.com/docs)
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/narhzih/medtech-frontend.git
+cd medtech-frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Build for production
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## 🧑‍💻 Development Notes
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Uses **Next.js Pages Router**, not App Router
+- Components managed with the **[shadcn CLI](https://ui.shadcn.com/docs/installation/next)**
+- Styling via **Tailwind CSS** (with dark mode support)
+- Data fetching handled by **SWR** hooks
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📜 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+> _Built with ❤️ and Javascript._
