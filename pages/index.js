@@ -1,9 +1,16 @@
+import Header from "@/components/layout/Header";
+import Hero from "@/components/layout/Hero";
+import Work1 from "@/components/layout/Work1";
+import Work2 from "@/components/layout/Work2";
+
 export default function Index() {
   return (
     <>
-      <h1 className="text-red-500 text-4xl font-bold">
-        Validating Tailwind Installation
-      </h1>
+      <Header />
+      <Hero />
+      <Work2 />
+      <Work1 />
+
     </>
   );
 }
