@@ -6,7 +6,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-
 import Image from 'next/image';
 
 
@@ -49,7 +48,7 @@ export default function LoginPage() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="jessicathompson@mail.com"
+                    placeholder="seyi908@mail.com"
                     className="mt-1"
                   />
                 </div>
