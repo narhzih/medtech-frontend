@@ -6,9 +6,9 @@ import { CalendarDays, MessagesSquare } from 'lucide-react';
 
 function Work1() {
   return (
-    <div className=" max-w-9/10 mx-auto py-6">
-      <div className="mx-auto px-4 sm:px-8">
-        <div className="text-center my-8 text-xl sm:text-2xl font-bold">
+    <div className="container mx-auto py-6">
+      <div className="  px-4 sm:px-8">
+        <div className="tsm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mt-10">
           <h2>For Patients: Empowering Your Health Journey</h2>
         </div>
 
@@ -19,10 +19,10 @@ function Work1() {
             </span>
             <CalendarDays className="my-4 text-blue-600 mx-auto md:mx-0" />
 
-            <h3 className="font-bold text-gray-700">
+            <h3 className="text-gray-900 text-lg title-font font-medium mb-2">
               Easy Appointment Booking
             </h3>
-            <p className="text-gray-400">
+            <p className="leading-relaxed text-gray-500 text-base">
               Schedule, reschedule, or cancel appointments with ease, directly
               through our secure patient portal. Receive timely reminders and
               manage your heathcare itinerary efficiently.
@@ -49,10 +49,10 @@ function Work1() {
               Patients
             </span>
             <MessagesSquare className="my-4 text-blue-600 mx-auto md:mx-0" />
-            <h3 className="font-bold text-gray-700">
+            <h3 className="text-gray-900 text-lg title-font font-medium mb-2">
               Secure Messaging & Communication
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-500 text-base">
               Communication directly you and securely with your healthcare
               provider. Ask questions, share updates, and receive important
               information without the hassle of phone calls.

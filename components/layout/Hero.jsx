@@ -9,7 +9,7 @@ export default function Hero() {
   };
   return (
     <section className="bg-blue-50 pt-28 pb-16">
-      <div className="max-w-9/10 mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Seamless Healthcare Experience <br /> for Everyone.
