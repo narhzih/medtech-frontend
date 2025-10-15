@@ -1,21 +1,17 @@
-import Header from "@/components/layout/Header";
-import Hero from "@/components/layout/Hero";
-import Work1 from "@/components/layout/Work1";
-import Work2 from "@/components/layout/Work2";
-import Work3 from "@/components/layout/Work3";
-import Work4 from "@/components/layout/Work4";
+import Hero from "@/components/layout/landing/Hero/Hero";
+import DoctorsSection from "@/components/layout/landing/work/DoctorsSection";
+import PatientsSection from "@/components/layout/landing/work/PatientsSection";
+import AdminSection from "@/components/layout/landing/work/AdminSection";
+import ManagementSection from "@/components/layout/landing/work/ManagementSection";
 
 export default function Index() {
   return (
     <>
-     <Header />
-     <Hero />
-      <Work2 />
-      <Work1 />
-      <Work3 />
-      <Work4 />
-
-     
+      <Hero />
+      <PatientsSection />
+      <DoctorsSection />
+      <AdminSection />
+      <ManagementSection />
     </>
   );
 }
