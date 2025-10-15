@@ -38,7 +38,7 @@ function Header() {
           />
           <Button
             text="Login"
-            color="border border-gray-300 text-white hover:bg-gray-100"
+            color="border bg-white text-gray-500 border-gray-300 hover:bg-gray-100"
           />
         </div>
         <button
