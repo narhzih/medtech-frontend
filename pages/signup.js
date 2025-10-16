@@ -59,7 +59,7 @@ export default function Signup() {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
               >
-                {({  }) => (
+                {() => (
                   <Form className="space-y-4">
                     <div>
                       <Label htmlFor="email" className="mb-3">
