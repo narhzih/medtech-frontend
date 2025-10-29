@@ -7,7 +7,7 @@ import { TelemedicineSessions } from "@/components/doctorDashboard/TelemedicineS
 import { Notifications } from "@/components/doctorDashboard/Notifications"
 import { Status } from "@/components/doctorDashboard/Status"
 import { DailyInsightsChart } from "@/components/doctorDashboard/DailyInsightsChart"
-import { Sidebar } from "@/components/Bar"
+import { Sidebar } from "@/components/Sidebar"
 import Topbar from "@/components/Topbar"
 
 
