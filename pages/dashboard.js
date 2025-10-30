@@ -1,0 +1,25 @@
+import DashboardLayout from "@/components/component/DashboardLayout";
+import BookingCalendar from "@/components/layout/dashboard/BookingCalendar";
+import Button from "@/components/layout/Button";
+import QueueStatus from "@/components/layout/dashboard/QueueStatus";
+import Appointments from "@/components/layout/dashboard/Appointments";
+import DashBtn from "@/components/component/DashBtn";
+import { CalendarClock } from "lucide-react";
+
+
+export default function Dashboard() {
+    return (
+        <>
+            <DashboardLayout>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+                    
+                    <BookingCalendar />
+                    <QueueStatus />
+                    <Appointments />
+                </div>
+
+            </DashboardLayout>
+
+        </>
+    );
+}

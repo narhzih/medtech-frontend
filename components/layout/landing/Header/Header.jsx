@@ -51,15 +51,15 @@ function Header() {
 
       {/* Mobile view */}
       {isOpen && (
-        <nav className="md:hidden bg-white border-t border-gray-100 flex flex-col space-y-4 py-4 px-6 text-gray-700">
+        <nav className="md:hidden bg-white border-t border-gray-100 flex flex-col space-y-4 py-4 px-6 text-gray-700 ">
           {navLinks.map((link, index) => (
             <Link key={index} path={link.path} text={link.text} />
           ))}
 
-          <div className="flex flex-col gap-3 mt-6">
+          <div className="flex flex-col gap-3 mt-6  ">
             <Button
               text="Request Demo"
-              color="bg-blue-600 text-white hover:bg-blue-700"
+              color="bg-blue-600 text-white hover:bg-blue-700 "
             />
             <Button
               text="Login"
