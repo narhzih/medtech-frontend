@@ -5,6 +5,9 @@ import QueueStatus from "@/components/layout/dashboard/QueueStatus";
 import Appointments from "@/components/layout/dashboard/Appointments";
 import DashBtn from "@/components/component/DashBtn";
 import { CalendarClock } from "lucide-react";
+import BookSuggestions from "@/components/layout/dashboard/BookSuggestions";
+import Notifications from "@/components/layout/dashboard/Notifications";
+import QuickAction from "@/components/layout/dashboard/QuickAction";
 
 
 export default function Dashboard() {
@@ -16,6 +19,10 @@ export default function Dashboard() {
                     <BookingCalendar />
                     <QueueStatus />
                     <Appointments />
+                    <Notifications />
+                    
+                    <QuickAction />
+                    <BookSuggestions />
                 </div>
 
             </DashboardLayout>

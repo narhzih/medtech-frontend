@@ -8,45 +8,62 @@ import {
   User,
   HelpCircle,
   Settings,
+  X,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import medtech from '@/public/medtech-logo.png';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const sidebarItems = [
-  { icon: <Home size={18} />, label: 'Dashboard', active: true },
-  { icon: <Calendar size={18} />, label: 'Appointments' },
-  { icon: <Clock size={18} />, label: 'Book Now' },
-  { icon: <Clock size={18} />, label: 'Queue Status' },
-  { icon: <Bell size={18} />, label: 'Notifications' },
-  { icon: <User size={18} />, label: 'Profile' },
-  { icon: <Settings size={18} />, label: 'Settings' },
-  { icon: <HelpCircle size={18} />, label: 'Help & Support' },
+  { icon: <Home size={18} />, label: 'Dashboard', href: '/' },
+  {
+    icon: <Calendar size={18} />,
+    label: 'Appointments',
+    href: '/appointments',
+  },
+  { icon: <Clock size={18} />, label: 'Book Now', href: '/book' },
+  { icon: <Clock size={18} />, label: 'Queue Status', href: '/queue' },
+  { icon: <Bell size={18} />, label: 'Notifications', href: '/notifications' },
+  { icon: <User size={18} />, label: 'Profile', href: '/profile' },
+  { icon: <Settings size={18} />, label: 'Settings', href: '/settings' },
+  { icon: <HelpCircle size={18} />, label: 'Help & Support', href: '/help' },
 ];
 
-export default function Sidebar({ items = sidebarItems }) {
+export default function Sidebar({ open, setOpen, items = sidebarItems }) {
   return (
-    <aside className="hidden md:flex fixed left-0 top-0 flex-col h-screen w-[15%] bg-white border-r z-20 py-6">
-      <div className="flex items-center space-x-2 px-6 mb-8">
-        <Image
-          src={medtech}
-          alt="MedTech Logo"
-          className="w-[55px] object-contain transition-all duration-300"
-          priority
-        />
-        <h1 className="text-base sm:text-lg font-bold text-gray-800 truncate">
-          Medtech
-        </h1>
+    <aside
+      className={cn(
+        'fixed md:static top-0 left-0 h-screen bg-white border-r z-40 py-6 w-[70%] sm:w-[50%] md:w-[15%] transition-transform duration-300 ease-in-out',
+        open ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
+      )}
+    >
+      <div className="flex items-center justify-between px-6 mb-8">
+        <div className="flex items-center space-x-2">
+          <Image
+            src={medtech}
+            alt="MedTech Logo"
+            className="w-[55px] object-contain"
+            priority
+          />
+          <h1 className="text-base sm:text-lg font-bold text-gray-800 truncate">
+            Medtech
+          </h1>
+        </div>
+        <button onClick={() => setOpen(false)} className="md:hidden">
+          <X size={20} />
+        </button>
       </div>
 
-      <nav className="flex flex-col space-y-1 px-4 text-gray-700">
+      <nav className="flex flex-col space-y-1 px-4 text-gray-700 overflow-hidden">
         {items.map((item, index) => (
           <SidebarItem
             key={index}
             icon={item.icon}
             label={item.label}
-            active={item.active}
+            href={item.href}
+            setOpen={setOpen}
           />
         ))}
       </nav>
@@ -54,13 +71,17 @@ export default function Sidebar({ items = sidebarItems }) {
   );
 }
 
-function SidebarItem({ icon, label, active }) {
+function SidebarItem({ icon, label, href, setOpen }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
   return (
     <Button
+      onClick={() => setOpen(false)}
       variant="ghost"
       className={cn(
         'w-full justify-start text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors cursor-pointer',
-        active && 'bg-blue-50 text-blue-600',
+        isActive && 'bg-blue-50 text-blue-600',
       )}
     >
       <span className="mr-3">{icon}</span>

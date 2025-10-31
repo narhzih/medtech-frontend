@@ -1,32 +1,29 @@
-"use client"
+'use client';
 
-import { Bell } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import profilePic from '@/public/medtech-logo.png';
 
-export default function Topbar() {
+export default function Topbar({ setOpen }) {
   return (
-    <div className="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm mb-6">
-      
-      <h1 className="text-lg md:text-xl font-semibold text-gray-800">
-        
-      </h1>
+    <div className="flex items-center justify-between bg-white border-b p-4">
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="md:hidden p-2 rounded-md hover:bg-gray-100"
+      >
+        <Menu size={22} />
+      </button>
 
-      
-      <div className="flex items-center gap-3">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="hover:bg-gray-100 text-gray-600"
-        >
-          <Bell size={20} />
-        </Button>
+      <h1 className="text-lg font-semibold">Dashboard</h1>
 
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/" alt="User" />
-          <AvatarFallback>DS</AvatarFallback>
-        </Avatar>
+      <div className="flex items-center space-x-3">
+        <Image
+          src={profilePic}
+          alt="Profile"
+          className="w-9 h-9 rounded-full object-cover cursor-pointer"
+          priority
+        />
       </div>
     </div>
-  )
+  );
 }
