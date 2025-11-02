@@ -1,9 +1,18 @@
+
 import { useRouter } from "next/router";
 import Header from "@/components/layout/landing/Header/Header";
 import "./styles/globals.css";
 import Footer from "@/components/layout/landing/Header/Footer";
 
+
+import "@/styles/globals.css";
+
+
+
+
+
 export default function App({ Component, pageProps }) {
+
 const router = useRouter();
 // I defined routes i want to hide the header and footer from. it's actually reusable 
 const noLayoutRoutes = ['/dashboard']
@@ -17,4 +26,11 @@ const hideLayout = noLayoutRoutes.some((path)=> router.pathname.startsWith(path)
       {!hideLayout && <Footer />}
     </>
   )
+
+  return (
+
+  <Component {...pageProps} />
+
+);
+
 }
