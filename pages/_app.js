@@ -5,8 +5,7 @@ import "./styles/globals.css";
 import Footer from "@/components/layout/landing/Header/Footer";
 
 
-import "@/styles/globals.css";
-
+import "@/pages/styles/globals.css";
 
 
 
