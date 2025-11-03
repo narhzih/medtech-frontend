@@ -16,7 +16,7 @@ export function DailyInsightsChart() {
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={200}>
-          <BarChart data={data}  margin={{ top: 10, right: 0, left: -30, bottom: 0 }} >
+          <BarChart data={data} margin={{ top: 10, right: 0, left: -30, bottom: 0 }} >
              <XAxis
               dataKey="name"
               tick={{ fill: "#6b7280", fontSize: 7}}

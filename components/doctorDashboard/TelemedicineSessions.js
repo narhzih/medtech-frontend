@@ -5,7 +5,7 @@ import { Video } from "lucide-react";
 export function TelemedicineSessions() {
   const sessions = [
     { name: "Meditech surgeons", time: "01:00 PM" },
-    { name: "Dr. Adeolu-Joan ", time: "04:00 PM" },
+    { name: "Dr. Adeolu-Joan", time: "04:00 PM" },
   ];
 
   return (

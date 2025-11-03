@@ -11,27 +11,22 @@ import { Sidebar } from "@/components/Sidebar"
 import Topbar from "@/components/Topbar"
 
 
-export default function doctorDashboard () {
+export default function DoctorDashboard() {
   return (
-     <main className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
+    <main className="min-h-screen bg-gray-50 flex">
       
-      <div className="w-full md:w-[25%] lg:w-[15%] bg-white border-b md:border-b-0 md:border-r border-gray-200 p-4 md:p-6">
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       
-      <div className="flex-1 p-4 md:p-6 overflow-y-auto">
-        <Topbar/>
+      <div className="flex-1 ml-[60px] md:ml-[15%] p-4 md:p-6 overflow-y-auto">
+        <Topbar />
         <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
-          
-          
           <div className="md:col-span-2 lg:col-span-3 space-y-6">
             <GreetingCard />
             <Appointments />
             <PatientQueue />
             <TelemedicineSessions />
           </div>
-
           <div className="space-y-6">
             <Notifications />
             <Status />
@@ -40,8 +35,9 @@ export default function doctorDashboard () {
         </div>
       </div>
     </main>
-  )
+  );
 }
+
 
 
 

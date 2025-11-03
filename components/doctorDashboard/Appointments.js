@@ -36,7 +36,7 @@ export function Appointments() {
             <Badge
               className={`px-3 py-1 text-xs font-medium rounded-full ${
                 item.status === "Confirmed"
-                  ? "bg-blue-400 text-white"
+                  ? "bg-blue-500 text-white"
                   : "bg-gray-100 text-black"
               }`}
             >

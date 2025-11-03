@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
 import { Home, Calendar, Clock, Bell, User, HelpCircle, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { FaFirstAid } from "react-icons/fa";
-
+import { useState } from "react";
 
 const sidebarItems = [
   { icon: <Home size={18} />, label: "Dashboard", active: true },
@@ -17,25 +17,32 @@ const sidebarItems = [
 ];
 
 export function Sidebar({ items = sidebarItems }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <aside className="hidden md:flex fixed left-0 top-0 flex-col h-screen w-[15%] bg-white border-r z-20 py-6">
+    <aside
+      onMouseEnter={() => setIsExpanded(true)}
+      onMouseLeave={() => setIsExpanded(false)}
+      className={cn(
+        "fixed left-0 top-0 h-screen bg-white border-r z-20 flex flex-col transition-all duration-300",
+        "w-[60px] md:w-[15%]",
+        isExpanded && "w-[160px] md:w-[15%]" 
+      )}
+    >
       
-      
-      <div className="flex items-center space-x-2 px-6 mb-8">
-        <FaFirstAid className="text-blue-600 text-xl sm:text-2xl" />
-        <h1 className="text-base sm:text-lg font-bold text-gray-800 truncate">
-          Medtech-Mavericks
-        </h1>
-      </div>
+      <div className="flex justify-center items-center py-6">
+   <FaFirstAid className="text-blue-600 text-xl" />
+ </div>
 
       
-      <nav className="flex flex-col space-y-1 px-4 text-gray-700">
+      <nav className="flex flex-col space-y-1 px-2 text-gray-700 ">
         {items.map((item, index) => (
           <SidebarItem
             key={index}
             icon={item.icon}
             label={item.label}
             active={item.active}
+            showLabel={isExpanded}
           />
         ))}
       </nav>
@@ -43,18 +50,25 @@ export function Sidebar({ items = sidebarItems }) {
   );
 }
 
-
-function SidebarItem({ icon, label, active }) {
+function SidebarItem({ icon, label, active, showLabel }) {
   return (
     <Button
       variant="ghost"
       className={cn(
-        "w-full justify-start text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors cursor-pointer",
+        "w-full justify-start text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors cursor-pointer ",
         active && "bg-blue-50 text-blue-600"
       )}
     >
       <span className="mr-3">{icon}</span>
-      {label}
+      <span
+        className={cn(
+          "transition-all duration-300 whitespace-nowrap pr-2", 
+          "text-[0.75rem] md:text-sm", 
+          !showLabel && "opacity-0 md:opacity-100"
+        )}
+      >
+        {label}
+      </span>
     </Button>
   );
 }
