@@ -1,9 +1,17 @@
+import Hero from "@/components/layout/landing/Hero/Hero";
+import DoctorsSection from "@/components/layout/landing/work/DoctorsSection";
+import PatientsSection from "@/components/layout/landing/work/PatientsSection";
+import AdminSection from "@/components/layout/landing/work/AdminSection";
+import ManagementSection from "@/components/layout/landing/work/ManagementSection";
+
 export default function Index() {
   return (
     <>
-      <h1 className="text-red-500 text-4xl font-bold">
-        Validating Tailwind Installation
-      </h1>
+      <Hero />
+      <PatientsSection />
+      <DoctorsSection />
+      <AdminSection />
+      <ManagementSection />
     </>
   );
 }
