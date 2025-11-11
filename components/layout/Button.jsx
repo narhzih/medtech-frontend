@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Button({ text, color, action }) {
   return (
     <button

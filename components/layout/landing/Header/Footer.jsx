@@ -4,6 +4,7 @@ import { Sparkle, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import FooterLink from './FooterLink';
 import medtech from '@/public/medtech-logo.png';
 import Image from 'next/image';
+import Button from '../../Button';
 export default function Footer() {
   return (
     <footer className="bg-[#F8FAFC] text-gray-700">
@@ -16,21 +17,20 @@ export default function Footer() {
           our comprehensive features designed for efficiency, patient
           satisfaction, and strategic insight.
         </p>
-        <Link
-          href="/get-started"
-          className="inline-block mt-6 bg-[#007BFF] hover:bg-[#0069d9] text-white text-sm font-medium px-6 py-2 rounded transition"
-        >
-          Get Started Today
-        </Link>
+        <Button
+          
+          text=" Get Started Today"
+          color="border border-gray-300 text-white hover:bg-gray-100 mt-5"
+        />
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto px-6 py-6 border-t border-gray-200">
         <div className="flex items-center space-x-2">
-           <Image
-                    src={medtech}
-                    alt="MedTech Logo"
-                    className="w-[55px] object-contain transition-all duration-300"
-                    priority
-                  />
+          <Image
+            src={medtech}
+            alt="MedTech Logo"
+            className="w-[55px] object-contain transition-all duration-300"
+            priority
+          />
         </div>
         <div className="flex space-x-6 mt-4 md:mt-0">
           <FooterLink href="/product">Product</FooterLink>
@@ -52,7 +52,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-=
+      =
       <div className="text-center text-xs text-gray-500 pb-6">
         © 2025 MedTech. All rights reserved.
       </div>

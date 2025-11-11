@@ -8,6 +8,7 @@ import { FaFirstAid } from 'react-icons/fa';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Signin() {
   const initialValues = {
@@ -135,10 +136,10 @@ export default function Signin() {
                     </div>
 
                     <p className="text-center text-xs text-gray-500">
-                      Don't have an account?{' '}
-                      <a href="/signup" className="text-blue-600 hover:underline">
+                      Don&apos;t have an account?{' '}
+                      <Link href="/signup" className="text-blue-600 hover:underline">
                         Register
-                      </a>
+                      </Link>
                     </p>
                   </Form>
                 )}
@@ -164,7 +165,7 @@ export default function Signin() {
                     Transform Hospital Management
                   </h2>
                   <p className="text-gray-500 text-sm sm:text-base max-w-sm">
-                    All your hospital's operations, patients, staff, billing,
+                    All your hospital&apos;s operations, patients, staff, billing,
                     and inventory — managed seamlessly in one place to boost
                     efficiency and care.
                   </p>

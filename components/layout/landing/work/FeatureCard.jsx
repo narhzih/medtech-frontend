@@ -1,20 +1,18 @@
 import React from 'react';
 
-function FeatureCard({ badge, Icon, title, description }) {
+export default function FeatureCard({ badge, Icon, title, description }) {
   return (
-    <div className="p-6 bg-white rounded-xl shadow-sm  hover:shadow-md transition-shadow duration-300 flex flex-col">
-      <span className="inline-block bg-gray-100 text-gray-500 text-xs font-medium px-2 py-1 rounded mb-4 w-fit">
+    <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col font-[Inter]">
+      <span className="inline-block bg-blue-50 text-blue-600 text-xs font-medium px-3 py-1 rounded-full mb-5 w-fit">
         {badge}
       </span>
-      <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-     {Icon && <Icon className="w-6 h-6" />}
+      <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-6">
+        {Icon && <Icon className="w-7 h-7" />}
       </div>
-      <h2 className="text-gray-900 text-lg font-semibold mb-2">{title}</h2>
-      <p className="leading-relaxed text-gray-600 text-sm md:text-base">
-        {description}
-      </p>
+      <h2 className="text-gray-900 text-xl font-[Montserrat] font-semibold mb-3 leading-snug">
+        {title}
+      </h2>
+      <p className="text-gray-600 text-base leading-relaxed">{description}</p>
     </div>
   );
 }
-
-export default FeatureCard;

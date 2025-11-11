@@ -1,32 +1,34 @@
-
-import React from 'react'
-import Notify from "@/components/component/Notify"
+import React from 'react';
+import Notify from '@/components/component/Notify';
 import { Eye } from 'lucide-react';
+
 function Notifications() {
   return (
-    <div className="border min-h-full shadow-md p-5  space-y-5 ">
-      <div className="space-y-5 ">
-        <h1 className="text-2xl font-bold py-2">Recent Notifications</h1>
+    <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col gap-5">
+      <h1 className="text-2xl font-semibold text-gray-800 leading-snug">
+        Recent Notifications
+      </h1>
 
+      <div className="flex flex-col gap-4">
         <Notify
-          text="Your Appointment with Dr.Smith on July 15 has been confirmed."
+          text="Your appointment with Dr. Smith on July 15 has been confirmed."
           duration="1 hour ago"
-          icon={<Eye />}
+          icon={<Eye size={18} className="text-blue-600" />}
         />
         <Notify
-          text="Your Appointment with Dr.Smith on July 15 has been confirmed."
-          duration="1 hour ago"
-          icon={<Eye />}
+          text="Reminder: Your follow-up session with Sarah Johnson is tomorrow at 10:00 AM."
+          duration="3 hours ago"
+          icon={<Eye size={18} className="text-blue-600" />}
         />
         <Notify
-          text="Your Appointment with Dr.Smith on July 15 has been confirmed."
-          duration="1 hour ago"
-          icon={<Eye />}
+          text="Lab results from your recent blood test are now available."
+          duration="Yesterday"
+          icon={<Eye size={18} className="text-blue-600" />}
         />
         <Notify
-          text="Your Appointment with Dr.Smith on July 15 has been confirmed."
-          duration="1 hour ago"
-          icon={<Eye />}
+          text="Dietitian consultation rescheduled to August 25 at 9:00 AM."
+          duration="2 days ago"
+          icon={<Eye size={18} className="text-blue-600" />}
         />
       </div>
     </div>
