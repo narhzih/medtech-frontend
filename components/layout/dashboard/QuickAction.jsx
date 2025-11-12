@@ -1,26 +1,29 @@
-import Action from '@/components/component/Action'
-import React from 'react'
-import { CalendarDays, CirclePlus, MessageSquare, Pen } from 'lucide-react'
+import React from 'react';
+import Action from '@/components/component/Action';
+import { CalendarDays, CirclePlus, MessageSquare, Pen } from 'lucide-react';
+
 function QuickAction() {
   return (
-    <div className="border flex flex-col items-center py-6">
-      <h1 className="text-lg font-semibold mb-6">Quick Actions</h1>
+    <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col gap-6">
+      <h1 className="text-2xl font-semibold text-gray-800 text-center leading-snug">
+        Quick Actions
+      </h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full">
         <Action
-          icon={<CirclePlus className="text-blue-500" />}
+          icon={<CirclePlus size={20} className="text-blue-600" />}
           text="Book New Appointment"
         />
         <Action
-          icon={<CalendarDays className="text-blue-500" />}
+          icon={<CalendarDays size={20} className="text-blue-600" />}
           text="View Past Consultations"
         />
         <Action
-          icon={<MessageSquare className="text-blue-500" />}
+          icon={<MessageSquare size={20} className="text-blue-600" />}
           text="Message Your Doctor"
         />
         <Action
-          icon={<Pen className="text-blue-500" />}
+          icon={<Pen size={20} className="text-blue-600" />}
           text="Manage Prescriptions"
         />
       </div>
@@ -28,4 +31,4 @@ function QuickAction() {
   );
 }
 
-export default QuickAction
+export default QuickAction;

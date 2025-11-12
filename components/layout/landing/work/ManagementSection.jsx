@@ -2,7 +2,7 @@ import React from 'react';
 import { ShieldCheck, Target, ChartNoAxesCombined } from 'lucide-react';
 import FeatureCard from './FeatureCard';
 
-function ManagementSection() {
+export default function ManagementSection() {
   const features = [
     {
       badge: 'Management',
@@ -26,13 +26,15 @@ function ManagementSection() {
         'Maintain compliance with built-in audit trails and documentation. Ensure adherence to healthcare standards confidently.',
     },
   ];
+
   return (
-    <section className="text-gray-600 body-font bg-gray-50 py-24">
-      <div className="container mx-auto px-5">
-        <h1 className="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-12">
-          For Management: Driving Strategic Growth.
+    <section className="bg-gray-50 py-24 text-gray-600 font-[Inter]">
+      <div className="container mx-auto px-6 md:px-12">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-[Montserrat] font-extrabold text-center text-gray-900 leading-tight mb-16">
+          For Management:{' '}
+          <span className="text-blue-600">Driving Strategic Growth</span>.
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
@@ -41,5 +43,3 @@ function ManagementSection() {
     </section>
   );
 }
-
-export default ManagementSection;

@@ -32,14 +32,19 @@ function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
+          
           <Button
             text="Request Demo"
-            color="bg-blue-600 text-white hover:bg-blue-700"
+            color=" cursor-pointer
+ bg-blue-600 text-white hover:bg-blue-700"
           />
-          <Button
-            text="Login"
-            color="border bg-white text-gray-500 border-gray-300 hover:bg-gray-100"
-          />
+       
+            <Button
+              text="Login"
+              color=" cursor-pointer
+              border bg-white text-gray-500 border-gray-300 hover:bg-gray-100"
+            />
+         
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -61,10 +66,12 @@ function Header() {
               text="Request Demo"
               color="bg-blue-600 text-white hover:bg-blue-700 "
             />
-            <Button
-              text="Login"
-              color="border border-gray-300 text-white hover:bg-gray-100"
-            />
+            <Link path="/login">
+              <Button
+                text="Login"
+                color="border border-gray-300 text-white hover:bg-gray-100 cursor-pointer"
+              />
+            </Link>
           </div>
         </nav>
       )}

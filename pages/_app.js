@@ -3,10 +3,12 @@ import { useRouter } from "next/router";
 import Header from "@/components/layout/landing/Header/Header";
 import "./styles/globals.css";
 import Footer from "@/components/layout/landing/Header/Footer";
-
+import { Inter, Montserrat } from 'next/font/google';
 
 import "@/pages/styles/globals.css";
 
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600'] });
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['600', '700', '800'] });
 
 
 
@@ -27,8 +29,9 @@ const hideLayout = noLayoutRoutes.some((path)=> router.pathname.startsWith(path)
   )
 
   return (
-
-  <Component {...pageProps} />
+    <main className={`${inter.className} ${montserrat.variable}`}>
+      <Component {...pageProps} />
+    </main>
 
 );
 

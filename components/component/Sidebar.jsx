@@ -15,20 +15,37 @@ import { Button } from '@/components/ui/button';
 import medtech from '@/public/medtech-logo.png';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const sidebarItems = [
-  { icon: <Home size={18} />, label: 'Dashboard', href: '/' },
+  { icon: <Home size={18} />, label: 'Dashboard', href: '/dashboard' },
   {
     icon: <Calendar size={18} />,
     label: 'Appointments',
-    href: '/appointments',
+    href: '/dashboard/appointment',
   },
-  { icon: <Clock size={18} />, label: 'Book Now', href: '/book' },
-  { icon: <Clock size={18} />, label: 'Queue Status', href: '/queue' },
-  { icon: <Bell size={18} />, label: 'Notifications', href: '/notifications' },
-  { icon: <User size={18} />, label: 'Profile', href: '/profile' },
-  { icon: <Settings size={18} />, label: 'Settings', href: '/settings' },
-  { icon: <HelpCircle size={18} />, label: 'Help & Support', href: '/help' },
+  { icon: <Clock size={18} />, label: 'Book Now', href: '/dashboard/book' },
+  {
+    icon: <Clock size={18} />,
+    label: 'Queue Status',
+    href: '/dashboard/queue',
+  },
+  {
+    icon: <Bell size={18} />,
+    label: 'Notifications',
+    href: '/dashboard/notifications',
+  },
+  { icon: <User size={18} />, label: 'Profile', href: '/dashboard/profile' },
+  {
+    icon: <Settings size={18} />,
+    label: 'Settings',
+    href: '/dashboard/settings',
+  },
+  {
+    icon: <HelpCircle size={18} />,
+    label: 'Help & Support',
+    href: '/dashboard/help',
+  },
 ];
 
 export default function Sidebar({ open, setOpen, items = sidebarItems }) {
@@ -77,15 +94,18 @@ function SidebarItem({ icon, label, href, setOpen }) {
 
   return (
     <Button
-      onClick={() => setOpen(false)}
+      asChild
       variant="ghost"
       className={cn(
         'w-full justify-start text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors cursor-pointer',
         isActive && 'bg-blue-50 text-blue-600',
       )}
+      onClick={() => setOpen(false)}
     >
-      <span className="mr-3">{icon}</span>
-      {label}
+      <Link href={href}>
+        <span className="mr-3">{icon}</span>
+        {label}
+      </Link>
     </Button>
   );
 }

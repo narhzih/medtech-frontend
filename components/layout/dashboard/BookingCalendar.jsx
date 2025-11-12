@@ -9,23 +9,23 @@ export default function BookingSection() {
   const [date, setDate] = React.useState(new Date());
 
   return (
-    <div className="flex flex-col border rounded-lg bg-white text-center p-5 min-h-[500px] shadow-sm">
-        <h1 className="text-xl sm:text-2xl font-bold mb-4">Booking Calendar</h1>
-
-       
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="border shadow-sm"
-            captionLayout="dropdown"
-          />
-       
-
-        <div className="py-8">
-          <DashBtn icon={CalendarIcon} text="View Daily Schedule" />
-        </div>
+    <div className="flex flex-col items-center justify-between border rounded-2xl bg-white text-center p-8 shadow-sm hover:shadow-md transition-all duration-300 ">
+      <h1 className="text-2xl font-semibold text-gray-800 mb-6 tracking-tight">
+        Booking Calendar
+      </h1>
+      <div className="w-full flex justify-center mb-8">
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="rounded-lg border shadow-sm p-4"
+          captionLayout="dropdown"
+        />
       </div>
-   
+
+      <div className="w-full mt-auto">
+        <DashBtn icon={CalendarIcon} text="View Daily Schedule" />
+      </div>
+    </div>
   );
 }
