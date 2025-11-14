@@ -15,7 +15,7 @@ const data = [
   { name: 'Follow-ups', value: 25 },
   { name: 'Lab Tests', value: 20 },
   { name: 'Physical Therapy', value: 15 },
-];
+]; 
 
 const COLORS = ['#2563eb', '#10b981', '#f59e0b', '#ef4444'];
 
@@ -29,7 +29,7 @@ export default function AppointmentTypeChart() {
         Distribution of appointments by type
       </p>
 
-      <div className="w-full h-64">
+      <div className="w-full h-80">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
