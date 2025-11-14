@@ -15,7 +15,7 @@ const data = [
   { name: 'Follow-ups', value: 25 },
   { name: 'Lab Tests', value: 20 },
   { name: 'Physical Therapy', value: 15 },
-];
+]; 
 
 const COLORS = ['#2563eb', '#10b981', '#f59e0b', '#ef4444'];
 
