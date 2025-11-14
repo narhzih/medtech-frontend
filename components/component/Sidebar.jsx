@@ -24,7 +24,7 @@ const sidebarItems = [
     label: 'Appointments',
     href: '/dashboard/appointment',
   },
-  { icon: <Clock size={18} />, label: 'Book Now', href: '/dashboard/book' },
+  { icon: <Clock size={18} />, label: 'View Schedule', href: '/dashboard/schedule' },
   {
     icon: <Clock size={18} />,
     label: 'Queue Status',

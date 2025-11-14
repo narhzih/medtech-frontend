@@ -29,7 +29,7 @@ export default function AppointmentTypeChart() {
         Distribution of appointments by type
       </p>
 
-      <div className="w-full h-64">
+      <div className="w-full h-80">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie

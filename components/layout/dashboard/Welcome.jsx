@@ -1,8 +1,11 @@
 import { CirclePlus, Stethoscope } from 'lucide-react';
 import Button from '../Button';
+import {  useRouter } from "next/navigation";
 
 export default function Welcome({user}) {
-  // Function to get greeting based on time maybe
+  
+    const router = useRouter();
+  // Function to get greeting based on time morning, afternoon evening
   const getGreeting = () => {
     const hour = new Date().getHours();
 
@@ -16,14 +19,16 @@ export default function Welcome({user}) {
         <h1 className="text-2xl font-bold">
           {getGreeting()}, {user?.name || 'User'}
         </h1>
-
         <p className="text-sm opacity-90 mt-1">
           Here’s your health overview for today.
         </p>
         <Button
           text="Add Appointment"
-          color="bg-white text-blue-500 mt-4 font-semibold"
+          color="white text-blue-500 mt-4 font-semibold"
           icon={<CirclePlus size={18} />}
+          action={() =>
+            router.push(`/dashboard/appointment`)
+          }
         />
       </div>
       <div className="mr-5 bg-white/20 p-4 rounded-full">

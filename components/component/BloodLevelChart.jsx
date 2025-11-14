@@ -51,7 +51,7 @@ export default function BloodLevelChart() {
             />
             <Bar
               dataKey="level"
-              fill="#ef4444" // red color for blood
+              fill="#ef4444" 
               radius={[6, 6, 0, 0]}
             />
           </BarChart>
