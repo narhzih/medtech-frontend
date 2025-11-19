@@ -46,7 +46,7 @@ export default function AppointmentPage() {
                 </div>
 
                 <div className="flex gap-2">
-                    <button onClick={bookAppointment} className="bg-green-600 text-white px-4 py-2 rounded">Book</button>
+                    <button onClick={bookAppointment} className="bg-blue-600 text-white px-4 py-2 rounded">Book</button>
                     <button onClick={() => router.push("/dashboard/schedule")} className="px-4 py-2 rounded border">Go to Schedule</button>
                 </div>
             </div>

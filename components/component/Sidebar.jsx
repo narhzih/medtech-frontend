@@ -35,6 +35,13 @@ const sidebarItems = [
     label: 'Notifications',
     href: '/dashboard/notifications',
   },
+
+{
+  icon : <Bell size={18} />,
+  label: "messages",
+  href: '/dashboard/messages'
+},
+
   { icon: <User size={18} />, label: 'Profile', href: '/dashboard/profile' },
   {
     icon: <Settings size={18} />,

@@ -64,17 +64,17 @@ export default function PatientStatsChart() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
           <p className="text-sm text-gray-500">Heart Rate</p>
-          <h2 className="text-xl font-bold text-red-500">107 bpm</h2>
+          <h2 className="text-xl font-bold text-cyan-500">107 bpm</h2>
           <p className="text-xs text-gray-400">Above the normal</p>
         </div>
         <div>
           <p className="text-sm text-gray-500">Blood Pressure</p>
-          <h2 className="text-xl font-bold text-purple-500">120/89 mmHg</h2>
+          <h2 className="text-xl font-bold text-cyan-500">120/89 mmHg</h2>
           <p className="text-xs text-gray-400">In the normal</p>
         </div>
         <div>
           <p className="text-sm text-gray-500">Glucose Rate</p>
-          <h2 className="text-xl font-bold text-green-600">97 mg/dl</h2>
+          <h2 className="text-xl font-bold text-cyan-500">97 mg/dl</h2>
           <p className="text-xs text-gray-400">In the normal</p>
         </div>
         <div>
