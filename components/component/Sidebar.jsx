@@ -24,7 +24,7 @@ const sidebarItems = [
     label: 'Appointments',
     href: '/dashboard/appointment',
   },
-  { icon: <Clock size={18} />, label: 'Book Now', href: '/dashboard/book' },
+  { icon: <Clock size={18} />, label: 'View Schedule', href: '/dashboard/schedule' },
   {
     icon: <Clock size={18} />,
     label: 'Queue Status',
@@ -35,6 +35,13 @@ const sidebarItems = [
     label: 'Notifications',
     href: '/dashboard/notifications',
   },
+
+{
+  icon : <Bell size={18} />,
+  label: "messages",
+  href: '/dashboard/messages'
+},
+
   { icon: <User size={18} />, label: 'Profile', href: '/dashboard/profile' },
   {
     icon: <Settings size={18} />,
